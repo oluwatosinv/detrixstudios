@@ -277,10 +277,25 @@ a.ftIcon {
 .container.promos {
   padding: 2em;
 }
-
+.nav-item > a {
+  color: black;
+}
+@media (min-width: 600px) {
+  .nav-link {
+    padding: 0px;
+  }
+  li.nav-item {
+    padding-left: 12px;
+  }
+}
 @media (min-width: 900px) {
   nav {
     max-height: 60px;
+  }
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    padding: 0px;
   }
   nav.navbar-dark.indigo.navbar.navbar-expand-md {
     padding-left: 40px;
@@ -352,6 +367,9 @@ a.ftIcon {
   }
   nav.navbar-dark.indigo.navbar.navbar-expand-md {
     background-color: black !important;
+  }
+  .navbar .nav-item .nav-link {
+    padding-left: 0;
   }
 
   .navbar.navbar-dark .breadcrumb .nav-item .nav-link,

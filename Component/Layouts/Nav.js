@@ -29,7 +29,9 @@ class NavbarPage extends Component {
     return (
       <MDBNavbar color='indigo' dark expand='md'>
         <MDBNavbarBrand>
-          <Image src='/logo.png' width={90} height={40} />
+          <Link href='/'>
+            <Image src='/logo.png' width={80} height={60} className='logo' />
+          </Link>
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id='navbarCollapse3' isOpen={this.state.isOpen} navbar>
@@ -43,28 +45,45 @@ class NavbarPage extends Component {
               <Link href='/About'>About US</Link>
             </MDBNavItem>
             {/* <MDBNavItem>
-              <MDBNavLink to='#!'>Features</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
               <MDBNavLink to='#!'>Pricing</MDBNavLink>
+            </MDBNavItem> */}
+            <MDBNavItem>
+              <MDBDropdown>
+                <MDBDropdownToggle nav caret>
+                  <span className='mr-2'>Wedding</span>
+                </MDBDropdownToggle>
+                <MDBDropdownMenu>
+                  <MDBDropdownItem href='/pre-wedding-photographer-nigeria'>
+                    Pre Wedding
+                  </MDBDropdownItem>
+                  <MDBDropdownItem href='#!'>
+                    Wedding Photography
+                  </MDBDropdownItem>
+                  <MDBDropdownItem href='#!'>
+                    Wedding Photography
+                  </MDBDropdownItem>
+                </MDBDropdownMenu>
+              </MDBDropdown>
             </MDBNavItem>
             <MDBNavItem>
               <MDBDropdown>
                 <MDBDropdownToggle nav caret>
-                  <span className='mr-2'>Dropdown</span>
+                  <span className='mr-2'>Non Wedding</span>
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
-                  <MDBDropdownItem href='#!'>Action</MDBDropdownItem>
-                  <MDBDropdownItem href='#!'>Another Action</MDBDropdownItem>
+                  <MDBDropdownItem href='#'>PreWedding</MDBDropdownItem>
                   <MDBDropdownItem href='#!'>
-                    Something else here
+                    Wedding Photography
                   </MDBDropdownItem>
                   <MDBDropdownItem href='#!'>
-                    Something else here
+                    Wedding Photography
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
-            </MDBNavItem> */}
+            </MDBNavItem>
+            <MDBNavItem>
+              <Link href='#'>Features</Link>
+            </MDBNavItem>
           </MDBNavbarNav>
         </MDBCollapse>
       </MDBNavbar>
