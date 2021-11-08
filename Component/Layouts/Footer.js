@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <MDBContainer className='footer'>
       <div>
-        <Link href='/ContactUs' className='contact-title'>
+        <Link href='/Contact-Us' className='contact-title' passHref>
           <p>CONNECT WITH US</p>
         </Link>
         <div className='footer-icon'>
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='inner2'>
-        <Link href='/ContactUs' className='contact-title'>
+        <Link href='/Contact-Us' className='contact-title' passHref>
           <p>Contact US</p>
         </Link>
         <p>plot 33 ayo balogun avenue lagos</p>

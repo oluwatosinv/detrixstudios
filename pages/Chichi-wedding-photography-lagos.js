@@ -1,18 +1,15 @@
 import React, { useState, useCallback } from 'react'
+import { MDBContainer } from 'mdbreact'
 import { render } from 'react-dom'
 import Gallery from 'react-photo-gallery'
 import Carousel, { Modal, ModalGateway } from 'react-images'
-import { photos } from '../Component/Photos/Photos'
-import { MDBContainer } from 'mdbreact'
+import { ChichiPhotos } from './ChichiPhotos'
+import ButtonMore from './Button'
 
-const preweddingphotographernigeria = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+function Chichi() {
   const [currentImage, setCurrentImage] = useState(0)
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const openLightbox = useCallback((event, { photo, index }) => {
+  const openLightbox = useCallback((event, { ChichiPhotos, index }) => {
     setCurrentImage(index)
     setViewerIsOpen(true)
   }, [])
@@ -21,18 +18,17 @@ const preweddingphotographernigeria = () => {
     setCurrentImage(0)
     setViewerIsOpen(false)
   }
+
   return (
-    <MDBContainer>
-      <h1 className='ImgGridTittle'>
-        Pre-Wedding Photographer Lagos, Nigeria{' '}
-      </h1>
-      <Gallery photos={photos} onClick={openLightbox} />
+    <MDBContainer className='galleyLolade'>
+      <h1 className='galleryTittle'>Chichi and Davonche</h1>
+      <Gallery photos={ChichiPhotos} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
             <Carousel
               currentIndex={currentImage}
-              views={photos.map((x) => ({
+              views={ChichiPhotos.map((x) => ({
                 ...x,
                 srcset: x.srcSet,
                 caption: x.title,
@@ -41,8 +37,9 @@ const preweddingphotographernigeria = () => {
           </Modal>
         ) : null}
       </ModalGateway>
+      <ButtonMore />
     </MDBContainer>
   )
 }
 
-export default preweddingphotographernigeria
+export default Chichi

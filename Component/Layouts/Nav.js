@@ -29,8 +29,14 @@ class NavbarPage extends Component {
     return (
       <MDBNavbar color='indigo' dark expand='md'>
         <MDBNavbarBrand>
-          <Link href='/'>
-            <Image src='/logo.png' width={80} height={60} className='logo' />
+          <Link href='/' passHref>
+            <Image
+              src='/logo.png'
+              width={80}
+              height={60}
+              className='logo'
+              alt='logo'
+            />
           </Link>
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
@@ -56,11 +62,11 @@ class NavbarPage extends Component {
                   <MDBDropdownItem href='/pre-wedding-photographer-nigeria'>
                     Pre Wedding
                   </MDBDropdownItem>
-                  <MDBDropdownItem href='#!'>
+                  <MDBDropdownItem href='/wedding-photographer-nigeria'>
                     Wedding Photography
                   </MDBDropdownItem>
-                  <MDBDropdownItem href='#!'>
-                    Wedding Photography
+                  <MDBDropdownItem href='wedding-videographer-nigeria'>
+                    Wedding Videography
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
@@ -82,7 +88,12 @@ class NavbarPage extends Component {
               </MDBDropdown>
             </MDBNavItem>
             <MDBNavItem>
-              <Link href='#'>Features</Link>
+              <Link href='https://www.detrixstudios.com/Client'>
+                <a target='_blank'>Client Gallery</a>
+              </Link>
+            </MDBNavItem>
+            <MDBNavItem>
+              <Link href='/Contact-Us'>Contact US</Link>
             </MDBNavItem>
           </MDBNavbarNav>
         </MDBCollapse>

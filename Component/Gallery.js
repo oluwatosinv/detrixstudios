@@ -58,7 +58,7 @@ const Gallery = () => {
       <h1 className='ImgGridTittle'>Wedding Gallery</h1>
       <div className='imageGrid'>
         {GalleryImgs.map((GalleryImg, index) => (
-          <Link href={GalleryImg.to} key={GalleryImg.name + index}>
+          <Link href={GalleryImg.to} key={GalleryImg.to} passHref>
             <div>
               <Image
                 className='gridImg'

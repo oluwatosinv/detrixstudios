@@ -14,6 +14,7 @@ const About = () => {
           height='100%'
           layout='responsive'
           objectFit='contain'
+          alt='detrix studios CEO'
         />
         <div>
           <h2 className='about-grid-tittle'>
