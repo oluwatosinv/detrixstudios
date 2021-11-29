@@ -38,7 +38,7 @@ const Gallery = () => {
     },
     {
       name: 5,
-      to: '/Chichi',
+      to: '/Chichi-wedding-photography-lagos',
       text: 'Chichi and Davonche',
       nickName: 'Wedding Photography',
       imgUrl:
