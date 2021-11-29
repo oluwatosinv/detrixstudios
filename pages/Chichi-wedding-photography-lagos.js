@@ -4,7 +4,7 @@ import { render } from 'react-dom'
 import Gallery from 'react-photo-gallery'
 import Carousel, { Modal, ModalGateway } from 'react-images'
 import { ChichiPhotos } from '../Component/Photos/ChichiPhotos'
-import ButtonMore from './Button'
+import ButtonMore from '../Component/Button'
 
 function Chichi() {
   const [currentImage, setCurrentImage] = useState(0)
