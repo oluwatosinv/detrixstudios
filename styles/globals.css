@@ -79,6 +79,9 @@ body {
 .carousel {
   margin-top: 3em;
 }
+.text-red-500{
+  color: red;
+}
 
 p.carousel-text-inner {
   font-style: italic;
