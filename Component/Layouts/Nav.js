@@ -33,7 +33,7 @@ class NavbarPage extends Component {
             <Image
               src='/logo.png'
               width={80}
-              height={60}
+              height={50}
               className='logo'
               alt='logo'
             />
